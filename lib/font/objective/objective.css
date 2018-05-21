@@ -1,0 +1,176 @@
+@font-face {
+    font-family: 'Objective';
+    src: url('Objective-Light.eot');
+    src: url('Objective-Light.eot?#iefix') format('embedded-opentype'),
+        url('Objective-Light.woff2') format('woff2'),
+        url('Objective-Light.woff') format('woff'),
+        url('Objective-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Objective';
+    src: url('Objective-MediumItalic.eot');
+    src: url('Objective-MediumItalic.eot?#iefix') format('embedded-opentype'),
+        url('Objective-MediumItalic.woff2') format('woff2'),
+        url('Objective-MediumItalic.woff') format('woff'),
+        url('Objective-MediumItalic.ttf') format('truetype');
+    font-weight: 500;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Objective';
+    src: url('Objective-Black.eot');
+    src: url('Objective-Black.eot?#iefix') format('embedded-opentype'),
+        url('Objective-Black.woff2') format('woff2'),
+        url('Objective-Black.woff') format('woff'),
+        url('Objective-Black.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Objective';
+    src: url('Objective-Super.eot');
+    src: url('Objective-Super.eot?#iefix') format('embedded-opentype'),
+        url('Objective-Super.woff2') format('woff2'),
+        url('Objective-Super.woff') format('woff'),
+        url('Objective-Super.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Objective';
+    src: url('Objective-Bold.eot');
+    src: url('Objective-Bold.eot?#iefix') format('embedded-opentype'),
+        url('Objective-Bold.woff2') format('woff2'),
+        url('Objective-Bold.woff') format('woff'),
+        url('Objective-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Objective';
+    src: url('Objective-BlackItalic.eot');
+    src: url('Objective-BlackItalic.eot?#iefix') format('embedded-opentype'),
+        url('Objective-BlackItalic.woff2') format('woff2'),
+        url('Objective-BlackItalic.woff') format('woff'),
+        url('Objective-BlackItalic.ttf') format('truetype');
+    font-weight: 900;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Objective';
+    src: url('Objective-BoldItalic.eot');
+    src: url('Objective-BoldItalic.eot?#iefix') format('embedded-opentype'),
+        url('Objective-BoldItalic.woff2') format('woff2'),
+        url('Objective-BoldItalic.woff') format('woff'),
+        url('Objective-BoldItalic.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Objective';
+    src: url('Objective-ExtraBoldItalic.eot');
+    src: url('Objective-ExtraBoldItalic.eot?#iefix') format('embedded-opentype'),
+        url('Objective-ExtraBoldItalic.woff2') format('woff2'),
+        url('Objective-ExtraBoldItalic.woff') format('woff'),
+        url('Objective-ExtraBoldItalic.ttf') format('truetype');
+    font-weight: 800;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Objective';
+    src: url('Objective-ExtraBold.eot');
+    src: url('Objective-ExtraBold.eot?#iefix') format('embedded-opentype'),
+        url('Objective-ExtraBold.woff2') format('woff2'),
+        url('Objective-ExtraBold.woff') format('woff'),
+        url('Objective-ExtraBold.ttf') format('truetype');
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Objective';
+    src: url('Objective-LightItalic.eot');
+    src: url('Objective-LightItalic.eot?#iefix') format('embedded-opentype'),
+        url('Objective-LightItalic.woff2') format('woff2'),
+        url('Objective-LightItalic.woff') format('woff'),
+        url('Objective-LightItalic.ttf') format('truetype');
+    font-weight: 300;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Objective';
+    src: url('Objective-Thin.eot');
+    src: url('Objective-Thin.eot?#iefix') format('embedded-opentype'),
+        url('Objective-Thin.woff2') format('woff2'),
+        url('Objective-Thin.woff') format('woff'),
+        url('Objective-Thin.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Objective';
+    src: url('Objective-Regular.eot');
+    src: url('Objective-Regular.eot?#iefix') format('embedded-opentype'),
+        url('Objective-Regular.woff2') format('woff2'),
+        url('Objective-Regular.woff') format('woff'),
+        url('Objective-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Objective';
+    src: url('Objective-Medium.eot');
+    src: url('Objective-Medium.eot?#iefix') format('embedded-opentype'),
+        url('Objective-Medium.woff2') format('woff2'),
+        url('Objective-Medium.woff') format('woff'),
+        url('Objective-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Objective';
+    src: url('Objective-ThinItalic.eot');
+    src: url('Objective-ThinItalic.eot?#iefix') format('embedded-opentype'),
+        url('Objective-ThinItalic.woff2') format('woff2'),
+        url('Objective-ThinItalic.woff') format('woff'),
+        url('Objective-ThinItalic.ttf') format('truetype');
+    font-weight: 100;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Objective';
+    src: url('Objective-Italic.eot');
+    src: url('Objective-Italic.eot?#iefix') format('embedded-opentype'),
+        url('Objective-Italic.woff2') format('woff2'),
+        url('Objective-Italic.woff') format('woff'),
+        url('Objective-Italic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Objective';
+    src: url('Objective-SuperItalic.eot');
+    src: url('Objective-SuperItalic.eot?#iefix') format('embedded-opentype'),
+        url('Objective-SuperItalic.woff2') format('woff2'),
+        url('Objective-SuperItalic.woff') format('woff'),
+        url('Objective-SuperItalic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+

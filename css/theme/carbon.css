@@ -3,9 +3,103 @@
  *
  * By Hakim El Hattab, http://hakim.se
  */
-@import url(../../lib/font/source-sans-pro/source-sans-pro.css);
+@import url(../../lib/font/objective/objective.css);
+@keyframes floating {
+  0% {
+    transform: translate(0, 0px) rotateY(-12deg);
+    text-shadow: 10px 10px 3px rgba(0, 0, 0, 0.15); }
+  65% {
+    transform: translate(0, 15px) rotateY(10deg) rotateX(10deg);
+    text-shadow: -10px -10px 3px rgba(0, 0, 0, 0.15); }
+  100% {
+    transform: translate(0, 0px) rotateY(-12deg);
+    text-shadow: 10px 10px 3px rgba(0, 0, 0, 0.15); } }
+
 section.has-light-background, section.has-light-background h1, section.has-light-background h2, section.has-light-background h3, section.has-light-background h4, section.has-light-background h5, section.has-light-background h6 {
   color: #222; }
+
+.reveal .controls .navigate-right, .reveal .controls .navigate-left, .reveal .controls .navigate-down, .reveal .controls .navigate-up {
+  background-image: linear-gradient(to right, #6a11cb 0%, #2575fc 100%); }
+  .reveal .controls .navigate-right .controls-arrow:before, .reveal .controls .navigate-right .controls-arrow:after, .reveal .controls .navigate-left .controls-arrow:before, .reveal .controls .navigate-left .controls-arrow:after, .reveal .controls .navigate-down .controls-arrow:before, .reveal .controls .navigate-down .controls-arrow:after, .reveal .controls .navigate-up .controls-arrow:before, .reveal .controls .navigate-up .controls-arrow:after {
+    width: 2em;
+    border-radius: 0;
+    left: 4px;
+    background-color: #ffffff; }
+
+.reveal .controls .navigate-right.highlight, .reveal .controls .navigate-left.highlight, .reveal .controls .navigate-up.highlight, .reveal .controls .navigate-down.highlight {
+  animation: none; }
+
+h1.gradient-header__header {
+  font-weight: 900 !important;
+  text-shadow: 2px 2px linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
+  position: relative;
+  color: #fff;
+  display: inline-block;
+  z-index: 99;
+  margin: 0 auto !important; }
+
+h1.gradient-header__gradient {
+  background: -webkit-linear-gradient(#6a11cb, #2575fc);
+  -webkit-background-clip: text;
+  font-weight: 900 !important;
+  -webkit-text-fill-color: transparent;
+  position: absolute;
+  right: 0;
+  left: 0;
+  top: 18px;
+  margin-bottom: 0 !important;
+  width: 100%;
+  text-align: center;
+  font-size: 2.5em !important;
+  z-index: 89;
+  animation-name: floating;
+  animation-duration: 20s;
+  font-size: 2.5em !important;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out; }
+
+.subtitle__blue {
+  color: #2575fc !important;
+  font-size: 1em !important;
+  font-weight: 400 !important; }
+
+.slide-footer {
+  width: 100%;
+  text-align: center;
+  bottom: 20px;
+  left: 0;
+  font-size: 0.9rem !important;
+  margin-top: 200px; }
+
+.custom-header {
+  position: fixed;
+  top: 20px;
+  color: #F5F5F5;
+  font-size: 1.6rem !important;
+  font-weight: 300 !important;
+  padding: 2px 4px !important;
+  background-image: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
+  opacity: 0;
+  transition: all 0.3s ease-in-out; }
+
+.custom-header.visible {
+  opacity: 1; }
+
+.content-slide .icon-node:before, .content-slide .icon-javascript:before {
+  color: #F5F5F5; }
+
+.align-left {
+  text-align: left; }
+
+.reveal .code-flexbox {
+  display: flex;
+  align-items: space-around; }
+
+.reveal img.code-screencap {
+  border: none;
+  height: 390px;
+  margin: 0 10px;
+  width: auto; }
 
 /*********************************************
  * GLOBAL STYLES
@@ -15,19 +109,19 @@ body {
   background-color: #222; }
 
 .reveal {
-  font-family: "Source Sans Pro", Helvetica, sans-serif;
+  font-family: "Objective", Helvetica, sans-serif;
   font-size: 42px;
   font-weight: normal;
-  color: #fff; }
+  color: #F5F5F5; }
 
 ::selection {
   color: #fff;
-  background: #bee4fd;
+  background: #a3c5fe;
   text-shadow: none; }
 
 ::-moz-selection {
   color: #fff;
-  background: #bee4fd;
+  background: #a3c5fe;
   text-shadow: none; }
 
 .reveal .slides > section,
@@ -45,8 +139,8 @@ body {
 .reveal h5,
 .reveal h6 {
   margin: 0 0 20px 0;
-  color: #fff;
-  font-family: "Source Sans Pro", Helvetica, sans-serif;
+  color: #F5F5F5;
+  font-family: "Objective", Helvetica, sans-serif;
   font-weight: 600;
   line-height: 1.2;
   letter-spacing: normal;
@@ -207,20 +301,20 @@ body {
  * LINKS
  *********************************************/
 .reveal a {
-  color: #42affa;
+  color: #2575fc;
   text-decoration: none;
   -webkit-transition: color .15s ease;
   -moz-transition: color .15s ease;
   transition: color .15s ease; }
 
 .reveal a:hover {
-  color: #8dcffc;
+  color: #70a5fd;
   text-shadow: none;
   border: none; }
 
 .reveal .roll span:after {
   color: #fff;
-  background: #068de9; }
+  background: #0350d2; }
 
 /*********************************************
  * IMAGES
@@ -228,7 +322,7 @@ body {
 .reveal section img {
   margin: 15px 0px;
   background: rgba(255, 255, 255, 0.12);
-  border: 4px solid #fff;
+  border: 4px solid #F5F5F5;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.15); }
 
 .reveal section img.plain {
@@ -242,21 +336,21 @@ body {
 
 .reveal a:hover img {
   background: rgba(255, 255, 255, 0.2);
-  border-color: #42affa;
+  border-color: #2575fc;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.55); }
 
 /*********************************************
  * NAVIGATION CONTROLS
  *********************************************/
 .reveal .controls {
-  color: #42affa; }
+  color: #2575fc; }
 
 /*********************************************
  * PROGRESS BAR
  *********************************************/
 .reveal .progress {
   background: rgba(0, 0, 0, 0.2);
-  color: #42affa; }
+  color: #2575fc; }
 
 .reveal .progress span {
   -webkit-transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);

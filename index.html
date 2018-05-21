@@ -4,13 +4,14 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+		<title>On Wepy</title>
 
-		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/black.css">
+		<link type="text/css" href="css/reveal.css" rel="preload" as="style" onload="this.rel='stylesheet'">
+		<link type="text/css" href="css/theme/carbon.css" rel="preload" as="style" onload="this.rel='stylesheet'">
+		<link type="text/css" href="css/theme/icons.css" rel="preload" as="style" onload="this.rel='stylesheet'">
 
 		<!-- Theme used for syntax highlighting of code -->
-		<link rel="stylesheet" href="lib/css/zenburn.css">
+		<link href="lib/css/zenburn.css" rel="preload" as="style" onload="this.rel='stylesheet'">
 
 		<!-- Printing and PDF exports -->
 		<script>
@@ -23,9 +24,55 @@
 	</head>
 	<body>
 		<div class="reveal">
+			<div id="myHead" class="custom-header"></div>
 			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
+				<section id="intro-overview">
+					<section>
+						<h1 class="gradient-header__header">ON WEPY <i class="icon-wechat"></i>
+							<h1 class="gradient-header__gradient">ON WEPY <i class="icon-wechat"></i></h1>
+						</h1>
+						<h5>A modern, painless workflow for building WeChat Mini Programs</h5>
+						<div class="subtitle__blue">John Roberts | @omg_damacha</div>
+						<p class="slide-footer">5/22/2018</p>
+					</section>
+					<section class="content-slide" data-state="showHeader" data-header="overview">
+						<h5>wtf is WePY?</h5>
+						<ul class="fragment">
+							<li>A component-based framework for building WeChat mini programs</li>
+							<li class="fragment">Optimizations on the existing MP framework, such as Promises, Async Functions, etc.</li>
+							<li class="fragment">Official support from Tencent</li>
+							<li class="fragment"><a href="https://github.com/Tencent/wepy" target="_blank">https://github.com/Tencent/wepy</a></li>
+						</ul>
+					</section>
+					<section class="content-slide" data-state="showHeader" data-header="overview">
+						<h5>why would I use WePY?</h5>
+						<ul class="fragment">
+							<li><i class="icon-component2"></i>Robust component system</li>
+							<li class="fragment"><i class="icon-javascript"></i>Write modern javascript</li>
+							<li class="fragment"><i class="icon-node"></i>Utilize the power of Node JS</li>
+							<li class="fragment"><i class="icon-source"></i>Leverage open source</li>
+							<li class="fragment"><i class="icon-code2"></i>Write better code</li>
+						</ul>
+					</section>
+					<section class="content-slide" data-state="showHeader" data-header="overview">
+						<div class="code-flexbox">
+							<div>
+								<p class="align-left">Original</p>
+								<img src="../lib/images/basic_original.png" alt="" class="code-screencap"/>
+							</div>
+							<div>
+								<p class="align-left">WePY</p>
+								<img src="../lib/images/basic_wepy.png" alt="" class="code-screencap"/>
+							</div>
+						</div>
+					</section>
+				</section>
+				<section>
+					<h1 class="gradient-header__header">Robust component system<i class="icon-component2"></i>
+						<h1 class="gradient-header__gradient">Robust component system
+						<i class="icon-component2"></i></h1>
+					</h1>
+				</section>
 			</div>
 		</div>
 
@@ -38,12 +85,28 @@
 			// - https://github.com/hakimel/reveal.js#dependencies
 			Reveal.initialize({
 				dependencies: [
-					{ src: 'plugin/markdown/marked.js' },
-					{ src: 'plugin/markdown/markdown.js' },
 					{ src: 'plugin/notes/notes.js', async: true },
 					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
 				]
-			});
+			})
+
+			Reveal.addEventListener('slidechanged', function (event) {
+					// event.previousSlide, event.currentSlide, event.indexh, event.indexv
+					var myHead = document.querySelector('#myHead')
+					if (event.currentSlide.dataset.header) {
+						myHead.innerHTML = event.currentSlide.dataset.header;
+						setTimeout (() => myHead.classList.add('visible'), 600)
+					} else {
+						myHead.innerHTML = ''
+						myHead.classList.remove('visible')
+					}
+				})
+			var state = Reveal.getState();
+
+			Reveal.slide(3);
+			// we're on slide 3
+
+			Reveal.setState(state);						
 		</script>
 	</body>
 </html>

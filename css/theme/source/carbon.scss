@@ -1,0 +1,173 @@
+/**
+ * Black theme for reveal.js. This is the opposite of the 'white' theme.
+ *
+ * By Hakim El Hattab, http://hakim.se
+ */
+
+
+// Default mixins and settings -----------------
+@import "../template/mixins";
+@import "../template/settings";
+// ---------------------------------------------
+
+
+// Include theme-specific fonts
+@import url(../../lib/font/objective/objective.css);
+
+
+// Override theme settings (see ../template/settings.scss)
+$backgroundColor: #222;
+$green: #84FAB0;
+// $blue: #8FD3F4;
+$purple:#6a11cb;
+$blue: #2575fc;
+
+$gradient1: linear-gradient(to right, $purple 0%, $blue 100%);
+$gradient2: linear-gradient(120deg,$green 0%, $blue 100%);
+$mainColor: #F5F5F5;
+$headingColor: #F5F5F5;
+
+$mainFontSize: 42px;
+$mainFont: 'Objective', Helvetica, sans-serif;
+$headingFont: 'Objective', Helvetica, sans-serif;
+$headingTextShadow: none;
+$headingLetterSpacing: normal;
+$headingTextTransform: uppercase;
+$headingFontWeight: 600;
+$linkColor: $blue;
+$linkColorHover: lighten( $linkColor, 15% );
+$selectionBackgroundColor: lighten( $linkColor, 25% );
+
+$heading1Size: 2.5em;
+$heading2Size: 1.6em;
+$heading3Size: 1.3em;
+$heading4Size: 1.0em;
+
+@keyframes floating {
+	0% {
+			transform: translate(0, 0px) rotateY(-12deg);
+			text-shadow: 10px 10px 3px rgba(0,0,0,0.15);
+	}
+	65% {
+			transform: translate(0, 15px) rotateY(10deg) rotateX(10deg);
+			text-shadow: -10px -10px 3px rgba(0,0,0,0.15);
+	}
+	100% {
+			transform: translate(0, 0px) rotateY(-12deg);
+			text-shadow: 10px 10px 3px rgba(0,0,0,0.15);
+	}	
+}
+
+
+section.has-light-background {
+	&, h1, h2, h3, h4, h5, h6 {
+		color: #222;
+	}
+}
+
+// ARROW overrides
+
+.reveal .controls .navigate-down, .reveal .controls .navigate-up {
+    // display: none;
+}
+
+.reveal .controls .navigate-right, .reveal .controls .navigate-left, .reveal .controls .navigate-down, .reveal .controls .navigate-up {
+	background-image: $gradient1;
+	.controls-arrow {
+		&:before, &:after {
+			width: 2em;
+			border-radius: 0;
+			left: 4px;
+			background-color: #ffffff;
+		}
+	}
+}
+.reveal .controls .navigate-right.highlight, .reveal .controls .navigate-left.highlight, .reveal .controls .navigate-up.highlight, .reveal .controls .navigate-down.highlight {
+	animation: none;
+}
+
+h1.gradient-header__header {
+	font-weight: 900!important;
+	text-shadow: 2px 2px $gradient1;
+	position: relative;
+	color: #fff;
+	display: inline-block;
+	z-index: 99;
+	margin: 0 auto !important;
+}
+h1.gradient-header__gradient {
+  background: -webkit-linear-gradient($purple, $blue);
+	-webkit-background-clip: text;
+	font-weight: 900!important;
+	-webkit-text-fill-color: transparent;
+	position: absolute;
+  right: 0;
+	left: 0;
+	top: 18px;
+	margin-bottom: 0!important;
+	width: 100%;
+	text-align: center;
+	font-size: 2.5em!important;
+	z-index: 89;
+	animation-name: floating;
+	animation-duration: 20s;
+	font-size: 2.5em!important;
+	animation-iteration-count: infinite;
+	animation-timing-function: ease-in-out;	
+}
+
+.subtitle__blue {
+	color: $blue!important;
+	font-size: 1em!important;
+	font-weight: 400!important;
+}
+
+.slide-footer {
+	width: 100%;
+	text-align: center;
+	bottom: 20px;
+	left: 0;
+	font-size: 0.9rem!important;
+	margin-top: 200px;
+}
+
+.custom-header {
+	position: fixed;
+	top: 20px;
+	color: $headingColor;
+	font-size: 1.6rem!important;
+	font-weight: 300!important;
+	padding: 2px 4px!important;
+	background-image: $gradient1;
+	opacity: 0;
+	transition: all 0.3s ease-in-out;
+}
+.custom-header.visible {
+	opacity: 1;
+}
+.content-slide {
+	.icon-node, .icon-javascript {
+		&:before {
+			color: $mainColor;
+		}
+	}
+}
+
+.align-left {
+	text-align: left;
+}
+
+.reveal .code-flexbox {
+	display: flex;
+	align-items: space-around;
+}
+.reveal img.code-screencap {
+	border: none;
+	height: 390px;
+	margin: 0 10px;
+	width: auto;
+}
+
+// Theme template ------------------------------
+@import "../template/theme";
+// ---------------------------------------------
