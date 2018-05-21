@@ -1,7 +1,7 @@
 {
-  "name": "reveal.js",
+  "name": "Wepy talk",
   "version": "3.6.0",
-  "description": "The HTML Presentation Framework",
+  "description": "My little presentation about wepy and why it is cool",
   "homepage": "http://revealjs.com",
   "subdomain": "revealjs",
   "main": "js/reveal.js",
@@ -11,13 +11,13 @@
     "build": "grunt"
   },
   "author": {
-    "name": "Hakim El Hattab",
-    "email": "hakim.elhattab@gmail.com",
-    "web": "http://hakim.se"
+    "name": "John Roberts",
+    "email": "john.calvin.roberts@gmail.com",
+    "web": ""
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/hakimel/reveal.js.git"
+    "url": "git://github.com/johncalvinroberts/wepy-talk.git"
   },
   "engines": {
     "node": ">=4.0.0"
