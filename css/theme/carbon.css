@@ -93,13 +93,16 @@ h1.gradient-header__gradient {
 
 .reveal .code-flexbox {
   display: flex;
-  align-items: space-around; }
+  justify-content: space-around; }
 
-.reveal img.code-screencap {
+.reveal img.code-screencap, .reveal img.code-screencap__big {
   border: none;
   height: 390px;
   margin: 0 10px;
   width: auto; }
+
+.reveal img.code-screencap__big {
+  height: 547px !important; }
 
 /*********************************************
  * GLOBAL STYLES
