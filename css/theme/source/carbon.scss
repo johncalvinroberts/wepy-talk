@@ -160,8 +160,19 @@ h1.gradient-header__gradient {
 .reveal .code-flexbox {
 	display: flex;
 	justify-content: space-around;
+	pre {
+		width: 100%!important;
+	}
+	.subtitle__small {
+		text-align: center;
+		width: 100%;
+		padding: 5px;
+		a {
+			color: #F5F5F5;
+		}
+	}
 }
-.reveal img.code-screencap, .reveal img.code-screencap__big {
+.reveal img.code-screencap, .reveal img.code-screencap__big, .reveal img.code-screencap__auto {
 	border: none;
 	height: 390px;
 	margin: 0 10px;
@@ -171,6 +182,17 @@ h1.gradient-header__gradient {
 .reveal img.code-screencap__big {
 	height: 547px!important;
 }
+
+.reveal img.code-screencap__auto {
+	height: auto;
+}
+
+.reveal img.qrcode {
+	height: 250px;
+	width: auto;
+}
+
+
 // Theme template ------------------------------
 @import "../template/theme";
 // ---------------------------------------------
