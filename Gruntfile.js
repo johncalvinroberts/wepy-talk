@@ -64,6 +64,20 @@ module.exports = function(grunt) {
 			}
 		},
 
+		imagemin: {
+			dynamic: {
+				options: {
+					optimizationLevel: 3,
+					svgoPlugins: [{ removeViewBox: false }]
+				},				
+				files: [{
+					expand: true,
+					cwd: './',
+					src: ['lib/images/*.{png,jpg,gif}']
+				}]
+			}
+		},
+
 		jshint: {
 			options: {
 				curly: false,
@@ -179,6 +193,9 @@ module.exports = function(grunt) {
 
 	// All CSS
 	grunt.registerTask( 'css', [ 'sass', 'autoprefixer', 'cssmin' ] );
+
+	grunt.loadNpmTasks('grunt-contrib-imagemin');
+	grunt.registerTask('default', ['imagemin']);
 
 	// Package presentation to archive
 	grunt.registerTask( 'package', [ 'default', 'zip' ] );
